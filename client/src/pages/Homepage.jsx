@@ -32,7 +32,7 @@ const HomePage = () => {
               <section className="mb-8">
                 <h2 className="text-2xl text-gray-800 font-bold">Banking Made Easy</h2>
                 <p className="text-gray-600 text-lg">Open an account with NetixPay and enjoy a seamless banking experience.</p>
-                <a href='/api/users/register'><button className="dark:bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded mt-4">Open an Account</button></a>
+                <a href='/register'><button className="dark:bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded mt-4">Open an Account</button></a>
               </section>
               <section className="mb-8">
                 <h2 className="text-2xl text-gray-800 font-bold">Personalized Services</h2>
