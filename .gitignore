@@ -1,0 +1,3 @@
+# Ignore client-side and server-side .gitignore files
+client/.gitignore
+server/.gitignore

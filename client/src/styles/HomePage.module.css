@@ -1,0 +1,57 @@
+.bank-landing-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  main {
+    margin-bottom: 40px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #777;
+    line-height: 1.5;
+  }
+  
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .primary-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+  }
+  
+  .secondary-button {
+    background-color: #fff;
+    color: #007bff;
+    border: 1px solid #007bff;
+  }
+  
