@@ -17,7 +17,7 @@ import { AuthContext } from "../context/AuthContext";
 import { Link } from 'react-router-dom';
 
 const aboutNetix = [
-  { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
+  { name: 'Analytics', description: 'Get Link better understanding of your traffic', href: '#', icon: ChartPieIcon },
   { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
   { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
 ]
@@ -33,11 +33,11 @@ const Navbar = () =>{
       <header className="dark:bg-gray-700">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-4 lg:px-8" aria-label="Global">
                   <div className="flex lg:flex-1">
-                  <a href="/" className="-m-1.5 p-1.5">
+                  <Link to="/" className="-m-1.5 p-1.5">
                         {/* <span className="sr-only">Your Company</span> */}
                         <img className="h-8 w-auto" src={MyImage} alt="LogoImage"/>
-                  </a>
-                  <a href='/' className="ps-1 text-xl text-white text-center font-bold">NetixPay</a>
+                  </Link>
+                  <Link to='/' className="ps-1 text-xl text-white text-center font-bold">NetixPay</Link>
                   </div>
                   <div className="flex lg:hidden">
                         <button type="button"
@@ -50,19 +50,18 @@ const Navbar = () =>{
                   <Popover.Group className="hidden lg:flex lg:gap-x-12">
                         {
                               user && (<>
-                                    <a onClick={()=>logoutUser()} href="/login" className="text-sm font-semibold leading-6 text-white">Log Out</a>
+                                    <Link onClick={()=>logoutUser()} to="/login" className="text-sm font-semibold leading-6 text-white">Log Out</Link>
                               </>)
                         }
                         {
                               !user && (<>
-                                    <a href="" className="text-sm font-semibold leading-6 text-white"><Link to="/login">Home</Link></a>
-                                    <a href="/register" className="text-sm font-semibold leading-6 text-white">Register</a>
+                                    <Link to="/login" className="text-sm font-semibold leading-6 text-white">Log In</Link>
+                                    <Link to="/register" className="text-sm font-semibold leading-6 text-white">Register</Link>
                               </>)
                         }
 
-                        <a href="/dashboard" className="text-sm font-semibold leading-6 text-white">
-                              Dashboard
-                        </a>
+                        <Link to="/dashboard" className="text-sm font-semibold leading-6 text-white">Dashboard</Link>
+
                         <Popover className="relative">
                               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white ">
                               About Us
@@ -82,10 +81,10 @@ const Navbar = () =>{
                                                 <item.icon className="h-6 w-6 text-gray-600 group-hover:text-indigo-600" aria-hidden="true" />
                                           </div>
                                           <div className="flex-auto">
-                                                <a href={item.href} className="block font-semibold text-gray-900">
+                                                <Link to={item.href} className="block font-semibold text-gray-900">
                                                 {item.name}
                                                 <span className="absolute inset-0" />
-                                                </a>
+                                                </Link>
                                                 <p className="mt-1 text-gray-600">{item.description}</p>
                                           </div>
                                     </div>
@@ -96,9 +95,7 @@ const Navbar = () =>{
                         </Popover>
                   </Popover.Group>
                   <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-                        <a href="profile" className="text-sm font-semibold leading-6 text-white">
-                              Profile <span aria-hidden="true">&rarr;</span>
-                        </a>
+                        <Link to="/profile" className="text-sm font-semibold leading-6 text-white">Profile <span aria-hidden="true">&rarr;</span></Link>
                   </div>
             </nav>
        {/* MOBILE NAVBAR */}
@@ -106,10 +103,10 @@ const Navbar = () =>{
                   <div className="fixed inset-0 z-10">
                         <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto dark:bg-gray-900 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                         <div className="flex items-center justify-between">
-                              <a href="/" className="-m-1.5 p-1.5">
+                              <Link to="/" className="-m-1.5 p-1.5">
                               <span className="sr-only">Your Company</span>
                               <img className="h-8 w-auto" src={MyImage} alt=""/>
-                              </a>
+                              </Link>
                               <button type="button"
                               className="-m-2.5 rounded-md p-2.5 text-white" onClick={() => setMobileMenuOpen(false)}>
                               <span className="sr-only">Close menu</span>
@@ -121,23 +118,23 @@ const Navbar = () =>{
                                     <div className="space-y-2 py-6">
                                           {
                                                 user && (<>
-                                                <a onClick={()=>logoutUser()} href="/login" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Log Out</a>
+                                                <Link onClick={()=>logoutUser()} to="/login" className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Log Out</Link>
                                                 </>)
                                           }
                                           {
                                                 !user && (<>
-                                                      <a href="/login"
-                                                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Log In</a>
-                                                      <a  href="/register"
-                                                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Register</a>
+                                                      <Link to="/login"
+                                                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Log In</Link>
+                                                      <Link to="/register"
+                                                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">Register</Link>
                                                 </>)
                                           }
-                                          <a href="/dashboard"
+                                          <Link to="/dashboard"
                                                 className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-gray-600">
-                                                Dashboard</a>
-                                          <a href="/profile"
+                                                Dashboard</Link>
+                                          <Link to="/profile"
                                                 className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-gray-600">
-                                                Profile</a>
+                                                Profile</Link>
                                           <Disclosure as="div" className="-mx-3">
                                                 {({ open }) => (
                                                 <>

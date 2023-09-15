@@ -1,5 +1,6 @@
 import React from 'react';
 import MyImage from '../assets/logo2.png';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -13,15 +14,15 @@ const HomePage = () => {
                 <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">We invest in the world’s potential</h1>
                 <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">Here at NetixPay we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p>
                 <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-                    <a href="/register" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                    <Link to="/register" className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                         Get started
                         <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>
-                    </a>
-                    <a href="/" className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
+                    </Link>
+                    <Link to="/" className="inline-flex justify-center hover:text-gray-900 items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg border border-white hover:bg-gray-100 focus:ring-4 focus:ring-gray-400">
                         Learn more
-                    </a>  
+                    </Link>  
                 </div>
             </div>
         </section>
@@ -32,7 +33,7 @@ const HomePage = () => {
               <section className="mb-8">
                 <h2 className="text-2xl text-gray-800 font-bold">Banking Made Easy</h2>
                 <p className="text-gray-600 text-lg">Open an account with NetixPay and enjoy a seamless banking experience.</p>
-                <a href='/register'><button className="dark:bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded mt-4">Open an Account</button></a>
+                <Link to='/register'><button className="dark:bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded mt-4">Open an Account</button></Link>
               </section>
               <section className="mb-8">
                 <h2 className="text-2xl text-gray-800 font-bold">Personalized Services</h2>
@@ -84,7 +85,7 @@ const HomePage = () => {
                                 <button type="submit" className="py-3 px-5 w-full text-sm font-medium text-center text-white rounded-lg border cursor-pointer bg-blue-700 border-blue-600 sm:rounded-none sm:rounded-r-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Subscribe</button>
                             </div>
                         </div>
-                        <div className="mx-auto max-w-screen-sm text-sm text-center text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <a href="/" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Read our Privacy Policy</a>.
+                        <div className="mx-auto max-w-screen-sm text-sm text-center text-gray-500 newsletter-form-footer dark:text-gray-300">We care about the protection of your data. <Link to="/" className="font-medium text-blue-600 dark:text-blue-500 hover:underline">Read our Privacy Policy</Link>.
                         </div>
                     </form>
               </div>
@@ -95,14 +96,14 @@ const HomePage = () => {
       
       {/* <div tabIndex="-1" className="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600">
           <div className="flex flex-col items-start mb-3 mr-4 md:items-center md:flex-row md:mb-0">
-              <a href="https://flowbite.com/" className="flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0 dark:border-gray-600">
+              <Link to="https://flowbite.com/" className="flex items-center mb-2 border-gray-200 md:pr-4 md:mr-4 md:border-r md:mb-0 dark:border-gray-600">
                   <img src={MyImage} className="h-6 mr-2" alt="Flowbite Logo"/>
                   <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">NETIXPAY</span>
-              </a>
-              <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Access to a platform that gives fast and smooth transactions with NetixPay</p>
+              </Link>
+              <p className="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Access to Link platform that gives fast and smooth transactions with NetixPay</p>
           </div>
           <div className="flex items-center flex-shrink-0">
-              <a href="/register" className="px-5 py-2 mr-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-gray-500 dark:hover:bg-gray-900 focus:outline-none dark:focus:ring-blue-800">Sign up</a>
+              <Link to="/register" className="px-5 py-2 mr-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-gray-500 dark:hover:bg-gray-900 focus:outline-none dark:focus:ring-blue-800">Sign up</Link>
               <button data-dismiss-target="#marketing-banner" type="button" className="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
                   <svg className="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                       <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>

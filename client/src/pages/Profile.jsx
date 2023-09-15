@@ -39,7 +39,7 @@ const Profile = () =>{
                   <button className="border bg-blue-500 hover:bg-red-400 w-3/4 py-3 rounded-lg text-gray-50 text-xl shadow-sm text-center {styles.btn}" type='submit'>Update</button>
               </div>
               <div className="text-center py-4">
-                <span className='text-gray-900'>Want to LogOut?<a onClick={()=>{logoutUser()}} className='text-red-800 hover:underline cursor-pointer' to='/'>Log Out</a></span>
+                <span className='text-gray-900'>Want to LogOut?<Link onClick={()=>{logoutUser()}} className='text-red-800 hover:underline cursor-pointer' to='/'>Log Out</Link></span>
               </div>
             </form>
           </div>
