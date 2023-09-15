@@ -36,7 +36,7 @@ const Profile = () =>{
                   <input className="border-gray-700 border-2 px-1 py-2 rounded-xl w-3/4 shadow-sm text-lg rounded-lg border cursor-pointer sm:rounded-none sm:rounded-r-lg hover:bg-gray-300 focus:ring-4" type="text" placeholder={user.email} />
                   <input className="border-gray-700 border-2 px-1 py-2 rounded-xl w-3/4 shadow-sm text-lg rounded-lg border cursor-pointer sm:rounded-none sm:rounded-r-lg hover:bg-gray-300 focus:ring-4" type="password" placeholder="enter new password"/>
                 {/* </div> */}
-                  <button className="border bg-blue-500 hover:bg-red-400 w-3/4 py-3 rounded-lg text-gray-50 text-xl shadow-sm text-center {styles.btn}" type='submit'>Update</button>
+                  <button className="border bg-blue-500 hover:bg-red-400 w-3/4 py-3 rounded-lg text-gray-50 text-xl shadow-sm text-center {styles.btn}" type='submit' disabled>Update</button>
               </div>
               <div className="text-center py-4">
                 <span className='text-gray-900'>Want to LogOut?<Link onClick={()=>{logoutUser()}} className='text-red-800 hover:underline cursor-pointer' to='/'>Log Out</Link></span>
