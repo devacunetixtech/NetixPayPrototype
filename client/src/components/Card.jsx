@@ -11,7 +11,7 @@ const Card = ({ logoSrc, accountNumber, accountName }) => {
       <div className="text-center">
         <div className="text-xl font-semibold mb-2">ACCT NAME: {user.name}</div>
         <div className="text-md font-semibold">PAY ID: {user.email}</div>
-        <p className="text-md font-semibold">Balance: {newBal}</p>
+        <p className="text-md font-semibold">Balance: ${newBal}</p>
       </div>
     </div>
   );
