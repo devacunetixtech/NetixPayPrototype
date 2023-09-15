@@ -8,7 +8,7 @@ require("dotenv").config()
 
 app.use(express.json());    
 app.use(cors({
-    origin:["https://localhost:3000", "https://netix-pay-prot.onrender.com"],
+    origin:["https://localhost:3000", "https://netix-pay-prot.onrender.com/api/users"],
 }));
 app.use("/api/users", userRoute);
 

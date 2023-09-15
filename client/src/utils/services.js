@@ -1,4 +1,4 @@
-export const baseUrl = "https://netix-pay-prot.onrender.com/api"
+export const baseUrl = "https://netix-pay-prot.onrender.com/api/users"
 
 export const postRequest = async (url, body) =>{
     
