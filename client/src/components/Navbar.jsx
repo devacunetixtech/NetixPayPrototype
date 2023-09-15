@@ -14,6 +14,7 @@ import {
 import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid';
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from 'react-router-dom';
 
 const aboutNetix = [
   { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
@@ -54,7 +55,7 @@ const Navbar = () =>{
                         }
                         {
                               !user && (<>
-                                    <a href="/login" className="text-sm font-semibold leading-6 text-white">Log In</a>
+                                    <a href="" className="text-sm font-semibold leading-6 text-white"><Link to="/login">Home</Link></a>
                                     <a href="/register" className="text-sm font-semibold leading-6 text-white">Register</a>
                               </>)
                         }
