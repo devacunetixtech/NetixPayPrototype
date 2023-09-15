@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors({
     origin:["https://localhost:3000", "https://netix-pay-prot.onrender.com/api/users"],
 }));
-app.use("/api/users", userRoute);
+// app.use("/api/users", userRoute);
 
 app.get("/", (req, res)=>{
     res.send("Welcome to MERN STACK")
