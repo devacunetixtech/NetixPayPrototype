@@ -151,10 +151,12 @@ export const AuthContextProvider = ({ children }) =>{
     const transferUser = useCallback(async (e) => {
         e.preventDefault(); 
         const debitUserID = user._id;
+        const debitUserName = user.name;
+
         if (transferInfo.amount > 50) {
             // if () {
                 // Payment is successful, now send the amount and email to the backend
-                sendTransferInfoToBackend(transferInfo.amount, transferInfo.email, transferInfo.narration, debitUserID);
+                sendTransferInfoToBackend(transferInfo.amount, transferInfo.email, transferInfo.narration, debitUserID, debitUserName);
             // } else {
                 // alert('Transfer failed.');
             // }
@@ -163,11 +165,11 @@ export const AuthContextProvider = ({ children }) =>{
         }
     }, [transferInfo]);
 
-    const sendTransferInfoToBackend = async (amount, email, payNarration, debitUserID) => {
+    const sendTransferInfoToBackend = async (amount, email, narration, debitUserID, debitUserName) => {
         try {
             const response = await postRequest(
                 `${baseUrl}/users/transfer`, 
-                JSON.stringify({ amount, email, narration:payNarration, debitUserID })
+                JSON.stringify({ amount, email, narration, debitUserID, debitUserName })
             );
             setIsTransferLoading(false)
             if (response.error) {

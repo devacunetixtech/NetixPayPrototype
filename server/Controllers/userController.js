@@ -99,7 +99,7 @@ const depositUser = async (req, res) => {
 };
 
 const transferUser = async (req, res) => {
-  const { email, amount, payNarration, debitUserID } = req.body;
+  const { email, amount, narration, debitUserID, debitUserName } = req.body;
 
   try {
     // Find the user by their email (the recipient of the funds)
@@ -131,9 +131,11 @@ const transferUser = async (req, res) => {
     // Save the transaction details in the Transaction model
     const transaction = new Transaction({
       senderUserID: debitUser._id,
+      senderName: debitUserName,
       recipientUserID: user._id,
+      recipientName: user.name,
       amount: parseFloat(amount),
-      narration: payNarration,
+      narration: narration,
     });
 
     await transaction.save();
