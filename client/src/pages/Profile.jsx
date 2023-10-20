@@ -22,7 +22,7 @@ const Profile = () =>{
                 ACTIVE : {user.name}
               </span>
             </div>
-
+            
             <form className='py-1'>
               <div className="profile flex justify-center py-1">
                 <label htmlFor="profile">
