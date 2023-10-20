@@ -101,8 +101,8 @@ export const AuthContextProvider = ({ children }) =>{
     const depositUser = useCallback(async (e) => {
         e.preventDefault();
         const timestamp = new Date().getTime(); // Get the current timestamp
-        const randomValue = Math.floor(Math.random() * 1000000)
-        const paymentref = `${user.name}PAY${timestamp}-${randomValue}`;
+        const randomValue = Math.random().toString(36).substring(2, 8);
+        const paymentref = `${timestamp}${randomValue}`;
         if (depositInfo.amount > 20) {
             // Initialize the Paystack payment
             const handler = PaystackPop.setup({
