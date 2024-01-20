@@ -1,5 +1,5 @@
-// export const baseUrl = "https://acunetixpay-newapi.onrender.com/api"
-export const baseUrl = "http://localhost:5000/api" 
+export const baseUrl = "https://acunetixpay-newapi.onrender.com/api"
+// export const baseUrl = "http://localhost:5000/api" 
 
 export const postRequest = async (url, body) =>{
     
