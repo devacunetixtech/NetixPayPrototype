@@ -29,19 +29,24 @@ const Register = () =>{
                 <input type="file" id='profile' name='profile'/>
               </div>
               <div className="textbox flex flex-col items-center gap-6">
-                <input className={styles.textbox} type="text" placeholder='Fullname*' 
+                <input className={styles.textbox} type="text" required placeholder='Fullname*' 
                   onChange={(e) => 
                     updateRegisterInfo({...registerInfo, name: e.target.value})
                   } 
                 />
-                <input className={styles.textbox} type="text" placeholder='Email*'
+                <input className={styles.textbox} type="email" required id='email' placeholder='Email*'
                   onChange={(e) => 
                     updateRegisterInfo({...registerInfo, email: e.target.value})
                   } 
                 />
-                <input className={styles.textbox} type="text" placeholder='Password*' 
+                <input className={styles.textbox} type="password" required placeholder='Password*' 
                   onChange={(e) => 
                     updateRegisterInfo({...registerInfo, password: e.target.value})
+                  }
+                />
+                <input className={styles.textbox} type="number" required placeholder='Enter 4 digit Pin*' 
+                  onChange={(e) => 
+                    updateRegisterInfo({...registerInfo, transactionPin: e.target.value})
                   }
                 />
                 <button className="border bg-blue-500 hover:bg-red-400 w-3/4 py-3 rounded-lg text-gray-50 text-xl shadow-sm text-center" type='submit' >

@@ -29,12 +29,12 @@ const Login = () =>{
               </div>
 
               <div className="textbox flex flex-col items-center gap-6">
-                <input className={styles.textbox} type="email" placeholder='Email*'
+                <input className={styles.textbox} type="email" required placeholder='Email*'
                   onChange={(e) =>
                     updateLoginInfo({...loginInfo, email: e.target.value})
                   }
                 />
-                <input className={styles.textbox} type="password" placeholder='Password*'
+                <input className={styles.textbox} type="password" required placeholder='Password*'
                   onChange={(e) => 
                     updateLoginInfo({...loginInfo, password: e.target.value})
                   }
@@ -48,6 +48,9 @@ const Login = () =>{
               </div>
               <div className="text-center py-4">
                 <span className='text-gray-900 font-bold'>Not Registered?<Link className='text-red-800' to='/register'>   Register Now</Link></span>
+              </div>
+              <div className="text-center py-4">
+               <Link className='text-red-800' to='/requestPasswordReset'> Forgot Password</Link>
               </div>
             </form>
           </div>

@@ -28,6 +28,10 @@ function classNames(...classes) {
 const Navbar = () =>{
       const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
       const { user, logoutUser } = useContext(AuthContext);
+
+      const closeMobileMenu = () => {
+            setMobileMenuOpen(false);
+      };
     return ( 
     <>
       <header className="dark:bg-gray-700">
@@ -55,12 +59,12 @@ const Navbar = () =>{
                         }
                         {
                               !user && (<>
-                                    <Link to="/login" className="text-sm font-semibold leading-6 text-white">Log In</Link>
-                                    <Link to="/register" className="text-sm font-semibold leading-6 text-white">Register</Link>
+                                    <Link onClick={closeMobileMenu} to="/login" className="text-sm font-semibold leading-6 text-white">Log In</Link>
+                                    <Link onClick={closeMobileMenu} to="/register" className="text-sm font-semibold leading-6 text-white">Register</Link>
                               </>)
                         }
 
-                        <Link to="/dashboard" className="text-sm font-semibold leading-6 text-white">Dashboard</Link>
+                        <Link onClick={closeMobileMenu} to="/dashboard" className="text-sm font-semibold leading-6 text-white">Dashboard</Link>
 
                         <Popover className="relative">
                               <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white ">
