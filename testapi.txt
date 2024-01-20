@@ -1,9 +1,9 @@
 --TransferRoute
 {
-    "userAcctNumber": "4C414DED0E",
+    "userAcctNumber": "",
     "amount": 450,
     "narration": "Paid",
-    "transactionPin": 5361,
-    "debitUserID": "65a5800f9acf33e93e2ec16f",
-    "debitUserName": "Precious"
+    "transactionPin": ,
+    "debitUserID": "",
+    "debitUserName": ""
 }
